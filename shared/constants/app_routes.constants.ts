@@ -4,4 +4,4 @@ export const APP_ROUTES = {
   APP: '/app',
   LOGIN: '/login',
   CASINO: (offerId: number) => `/casino/${offerId}`,
-};
+} as const;
