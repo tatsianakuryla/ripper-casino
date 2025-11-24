@@ -1,22 +1,14 @@
 import type { JSX } from 'react';
 
-import { EmptyPage } from '@/components/ui/EmptyPage';
+import { Container } from '@/components/ui/Container';
+import { Loader } from '@/components/ui/Loader/Loader';
 
-type CasinoPageParams = {
-  offerId: string;
-};
-
-interface CasinoPageProperties {
-  params: Promise<CasinoPageParams>;
-}
-
-export default async function CasinoPage({
-  params,
-}: CasinoPageProperties): Promise<JSX.Element> {
-  const { offerId } = await params;
+export default function CasinoPage(): JSX.Element {
   return (
     <main>
-      <EmptyPage title="Casino page " description={`Offer ID: ${offerId}`} />
+      <Container styles="items-center justify-center min-h-[calc(100vh-200px)]">
+        <Loader size={48} />
+      </Container>
     </main>
   );
 }

@@ -10,6 +10,7 @@ interface AppLinkProperties extends Omit<NextLinkProps, 'href'> {
   href?: NextLinkProps['href'];
   className?: string;
   children: ReactNode;
+  disabled?: boolean;
 }
 
 export const AppLink = ({
@@ -18,6 +19,7 @@ export const AppLink = ({
   className,
   target,
   rel,
+  disabled = false,
   ...rest
 }: AppLinkProperties): JSX.Element => {
   const safeRel =
@@ -25,12 +27,22 @@ export const AppLink = ({
       ? ['noopener', 'noreferrer', rel].filter(Boolean).join(' ')
       : rel;
 
+  const disabledClasses = disabled
+    ? 'opacity-50 cursor-not-allowed pointer-events-none'
+    : '';
+
   return (
     <Link
-      href={href}
-      className={`flex items-center justify-center ${className}`}
-      target={target}
+      href={disabled ? '#' : href}
+      className={`flex items-center justify-center ${className} ${disabledClasses}`}
+      target={disabled ? undefined : target}
       rel={safeRel}
+      aria-disabled={disabled}
+      onClick={(event) => {
+        if (disabled) {
+          event.preventDefault();
+        }
+      }}
       {...rest}
     >
       {children}
