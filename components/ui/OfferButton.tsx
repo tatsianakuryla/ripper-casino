@@ -19,7 +19,7 @@ export const OfferButton = ({
   const variants = {
     primary:
       'bg-button-primary text-sm text-bg-main py-[12px] px-[66.5px] rounded-[4px] hover:scale-105 transition-transform',
-    hero: 'bg-button-primary text-[28px] tracking-[0] text-bg-main py-[20px] px-[48px] rounded-[4px] hover:scale-105 transition-transform uppercase max-w-[340px]',
+    hero: 'bg-button-primary text-[28px] tracking-[0] text-bg-main py-[20px] px-[48px] rounded-[4px] hover:scale-105 transition-transform uppercase w-[340px]',
   };
 
   return (
@@ -29,7 +29,7 @@ export const OfferButton = ({
       target={offerId ? '_blank' : undefined}
       className={variants[variant]}
     >
-      {isLoading ? 'Loading...' : children}
+      {children}
     </AppLink>
   );
 };

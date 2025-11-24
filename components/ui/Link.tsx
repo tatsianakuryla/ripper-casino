@@ -28,7 +28,7 @@ export const AppLink = ({
       : rel;
 
   const disabledClasses = disabled
-    ? 'opacity-50 cursor-not-allowed pointer-events-none'
+    ? 'cursor-not-allowed pointer-events-none'
     : '';
 
   return (

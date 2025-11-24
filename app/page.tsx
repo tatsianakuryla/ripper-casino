@@ -1,11 +1,11 @@
 import type { JSX } from 'react';
 
-import { EmptyPage } from '@/components/ui/EmptyPage';
+import { WelcomeSection } from '@/components/sections/Welcome/WelcomeSection';
 
 export default function HomePage(): JSX.Element {
   return (
     <main>
-      <EmptyPage title="Home page" />
+      <WelcomeSection />
     </main>
   );
 }
