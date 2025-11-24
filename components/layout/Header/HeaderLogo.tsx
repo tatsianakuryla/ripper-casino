@@ -14,7 +14,7 @@ export const HeaderLogo = (): JSX.Element => {
     >
       <Image
         src="/ripper-logo.svg"
-        alt="Ripper Casino HeaderLogo"
+        alt="Ripper Casino"
         width={97}
         height={52.52}
         priority

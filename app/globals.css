@@ -4,8 +4,9 @@
   --font-sans: var(--font-roboto), system-ui, sans-serif;
   --font-display: var(--font-paytone-one), system-ui, sans-serif;
 
-  --color-bg-main: #080d15;
-  --color-bg-section: #233e60;
+  --color-bg-black: #080d15;
+  --color-bg-dark-blue: #233e60;
+  --color-bg-ocean-blue: #15263a;
 
   --color-text-main: #ffffff;
   --color-text-accent: #fdff00;

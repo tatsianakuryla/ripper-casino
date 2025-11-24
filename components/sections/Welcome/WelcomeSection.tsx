@@ -10,8 +10,8 @@ import { useFirstOffer } from '@/hooks/api/useFirstOffer';
 export const WelcomeSection = (): JSX.Element => {
   const { offerId, isLoading, welcomeText } = useFirstOffer();
   return (
-    <section className="font-display">
-      <Container styles="bg-[var(--color-bg-section)]">
+    <section>
+      <Container styles="bg-[var(--color-bg-dark-blue)]">
         <div className="flex w-full gap-[22px] items-center justify-between 2xl:justify-center">
           <WelcomeLeft
             offerId={offerId}

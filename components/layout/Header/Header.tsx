@@ -12,8 +12,8 @@ export const Header = (): JSX.Element => {
   const { offerId, isLoading } = useFirstOffer();
 
   return (
-    <header>
-      <Container styles="items-center gap-[24px] py-[21.5px] bg-[var(--color-bg-main)]">
+    <header className="bg-[var(--color-bg-black)]">
+      <Container styles="items-center gap-[24px] py-[21.5px]">
         <HeaderLogo />
         <HeaderNavigation offerId={offerId} isLoading={isLoading} />
       </Container>

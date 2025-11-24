@@ -33,7 +33,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en" className={`${roboto.variable} ${paytoneOne.variable}`}>
-      <body className="font-sans bg-bg-main text-text-main my-0 mx-auto">
+      <body className="font-sans bg-bg-black text-text-main my-0 mx-auto">
         <QueryProvider>
           <ToasterProvider />
           <Header />
