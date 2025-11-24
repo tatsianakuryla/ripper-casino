@@ -11,8 +11,8 @@ export const WelcomeSection = (): JSX.Element => {
   const { offerId, isLoading, welcomeText } = useFirstOffer();
   return (
     <section>
-      <Container styles="bg-[var(--color-bg-dark-blue)]">
-        <div className="flex w-full gap-[22px] items-center justify-between 2xl:justify-center">
+      <Container styles="bg-[var(--color-bg-dark-blue)] pt-[15px] pb-[18px]">
+        <div className="flex w-full items-center justify-between 2xl:justify-center">
           <WelcomeLeft
             offerId={offerId}
             isLoading={isLoading}

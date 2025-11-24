@@ -9,23 +9,29 @@ interface HeaderNavigationProperties {
   isLoading: boolean;
 }
 
+const NAV_ITEMS = [
+  { href: APP_ROUTES.BONUS, label: 'Bonus' },
+  { href: APP_ROUTES.APP, label: 'App' },
+  { href: APP_ROUTES.LOGIN, label: 'Login' },
+] as const;
+
 export const HeaderNavigation = ({
   offerId,
   isLoading,
 }: HeaderNavigationProperties): JSX.Element => {
   return (
-    <nav className="py-[4px]" aria-label="Header Navigation">
-      <ul className="flex w-full gap-[24px] justify-between align-center leading-[28px] text-base text-text-main font-display">
-        <AppLink href={APP_ROUTES.BONUS} className={'hover:text-text-accent'}>
-          Bonus
-        </AppLink>
-        <AppLink href={APP_ROUTES.APP} className={'hover:text-text-accent'}>
-          App
-        </AppLink>
-        <AppLink href={APP_ROUTES.LOGIN} className={'hover:text-text-accent'}>
-          Login
-        </AppLink>
-        <OfferButton offerId={offerId} isLoading={isLoading} />
+    <nav className="mr-[3px]" aria-label="Header Navigation">
+      <ul className="flex w-full justify-between align-center leading-[28px] text-base text-text-main font-display gap-[26px]">
+        {NAV_ITEMS.map((item) => (
+          <li className={`flex items-center justify-center`} key={item.label}>
+            <AppLink href={item.href} className="hover:text-text-accent">
+              {item.label}
+            </AppLink>
+          </li>
+        ))}
+        <li className={`flex items-center justify-center`} key="offer-button">
+          <OfferButton offerId={offerId} isLoading={isLoading} />
+        </li>
       </ul>
     </nav>
   );

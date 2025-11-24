@@ -13,7 +13,7 @@ export const Header = (): JSX.Element => {
 
   return (
     <header className="bg-[var(--color-bg-black)]">
-      <Container styles="items-center gap-[24px] py-[21.5px]">
+      <Container styles="items-center gap-[12px] py-[21.5px]">
         <HeaderLogo />
         <HeaderNavigation offerId={offerId} isLoading={isLoading} />
       </Container>

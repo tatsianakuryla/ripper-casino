@@ -34,7 +34,7 @@ export const AppLink = ({
   return (
     <Link
       href={disabled ? '#' : href}
-      className={`flex items-center justify-center ${className} ${disabledClasses}`}
+      className={`${className} ${disabledClasses}`}
       target={disabled ? undefined : target}
       rel={safeRel}
       aria-disabled={disabled}

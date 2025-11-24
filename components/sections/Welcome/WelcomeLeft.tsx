@@ -14,11 +14,11 @@ export const WelcomeLeft = ({
   welcomeText = 'Exclusive welcome offer!',
 }: HeroLeftProperties): JSX.Element => {
   return (
-    <div className="flex flex-col gap-[48px] max-w-[500px] pt-[160px] pb-[150px]">
-      <h2 className="flex items-center min-h-[90px] font-normal text-[32px] leading-[130%] tracking-[0%] align-middle uppercase text-white">
+    <div className="flex flex-col gap-[48px] max-w-[500px] py-[0px] ml-[7px]">
+      <h2 className="flex items-center min-h-[90px] font-normal text-[32px] leading-[130%] tracking-[0%] uppercase text-white">
         {isLoading ? 'Loading...' : `Exclusive welcome offer ${welcomeText}`}
       </h2>
-      <OfferButton offerId={offerId} isLoading={isLoading} variant="hero">
+      <OfferButton offerId={offerId} isLoading={isLoading} variant="welcome">
         claim bonus
       </OfferButton>
     </div>

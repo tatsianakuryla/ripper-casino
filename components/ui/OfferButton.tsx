@@ -6,7 +6,7 @@ import { APP_ROUTES } from '@/shared/constants/app_routes.constants';
 interface OfferButtonProps {
   offerId?: number;
   isLoading: boolean;
-  variant?: 'primary' | 'hero';
+  variant?: 'primary' | 'welcome';
   children?: string;
 }
 
@@ -18,8 +18,9 @@ export const OfferButton = ({
 }: OfferButtonProps): JSX.Element => {
   const variants = {
     primary:
-      'bg-button-primary text-sm text-bg-dark-blue py-[12px] px-[66.5px] rounded-[4px] hover:scale-105 transition-transform',
-    hero: 'bg-button-primary text-[28px] tracking-[0] text-bg-black py-[20px] px-[48px] rounded-[4px] hover:scale-105 transition-transform uppercase w-[340px]',
+      'bg-button-primary text-sm text-bg-black py-[12px] px-[66px] rounded-[4px] hover:scale-105 transition-transform max-w-[210px]',
+    welcome:
+      'bg-button-primary text-[28px] tracking-[0] text-bg-black py-[20px] px-[66px] rounded-[4px] hover:scale-105 transition-transform uppercase max-w-[340px]',
   };
 
   return (
