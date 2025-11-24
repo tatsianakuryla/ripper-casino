@@ -16,14 +16,23 @@ const eslintConfig = [
       'dist/**',
       'coverage/**',
       'build/**',
+      '*.config.js',
+      '*.config.mjs',
+      '*.config.ts',
+      'next-env.d.ts',
     ],
   },
 
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+
+  // TypeScript type-checked rules only for .ts/.tsx files
+  ...tseslint.configs.recommendedTypeChecked.map((config) => ({
+    ...config,
+    files: ['**/*.ts', '**/*.tsx'],
+  })),
 
   {
-    files: ['**/*.{ts,tsx,js,jsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {

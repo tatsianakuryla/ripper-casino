@@ -5,7 +5,8 @@ import type { Metadata } from 'next';
 import type { ReactNode, JSX } from 'react';
 
 import { Header } from '@/components/layout/Header/Header';
-import { ToasterProvider } from '@/shared/toaster/ToasterProvider';
+import { QueryProvider } from '@/providers/QueryProvider';
+import { ToasterProvider } from '@/providers/ToasterProvider';
 
 export const metadata: Metadata = {
   title: 'Ripper Casino',
@@ -33,9 +34,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${roboto.variable} ${paytoneOne.variable}`}>
       <body className="font-sans bg-bg-main text-text-main my-0 mx-auto">
-        <ToasterProvider />
-        <Header />
-        {children}
+        <QueryProvider>
+          <ToasterProvider />
+          <Header />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );
