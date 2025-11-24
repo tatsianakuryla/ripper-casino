@@ -11,7 +11,7 @@ function createError(message: string, statusCode?: number): Error {
   return error;
 }
 
-export function handle_error(error: unknown): Promise<never> {
+export function handleError(error: unknown): Promise<never> {
   if (isValidationError(error)) {
     console.error('[Validation] Validation failed:', {
       message: error.message,

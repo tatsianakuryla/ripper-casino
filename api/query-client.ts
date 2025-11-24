@@ -1,6 +1,6 @@
 import { QueryClient } from '@tanstack/react-query';
 
-import { type Game } from '@/api/api.types';
+import { type GameType } from '@/api/schemas';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
@@ -14,6 +14,6 @@ export const queryClient = new QueryClient({
 });
 
 export const queryKeys = {
-  website: ['website'] as const,
-  games: (type: Game) => ['games', type] as const,
+  siteData: ['site-data'] as const,
+  games: (type: GameType) => ['games', type] as const,
 };
