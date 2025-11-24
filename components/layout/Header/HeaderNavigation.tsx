@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 
 import { AppLink } from '@/components/ui/Link';
+import { OfferButton } from '@/components/ui/OfferButton';
 import { APP_ROUTES } from '@/shared/constants/app_routes.constants';
 
 interface HeaderNavigationProperties {
@@ -24,16 +25,7 @@ export const HeaderNavigation = ({
         <AppLink href={APP_ROUTES.LOGIN} className={'hover:text-text-accent'}>
           Login
         </AppLink>
-        <AppLink
-          href={offerId ? APP_ROUTES.CASINO(offerId) : APP_ROUTES.HOME}
-          disabled={!offerId || isLoading}
-          target={offerId ? '_blank' : undefined}
-          className={
-            'bg-button-primary text-sm text-bg-main py-[12px] px-[66.5px] rounded-[4px] hover:scale-105 transition-transform'
-          }
-        >
-          {isLoading ? 'Loading...' : 'Play Now'}
-        </AppLink>
+        <OfferButton offerId={offerId} isLoading={isLoading} />
       </ul>
     </nav>
   );
