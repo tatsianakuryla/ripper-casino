@@ -28,7 +28,7 @@ export const AppLink = ({
   return (
     <Link
       href={href}
-      className={className}
+      className={`flex items-center justify-center ${className}`}
       target={target}
       rel={safeRel}
       {...rest}
