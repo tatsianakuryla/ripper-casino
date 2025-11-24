@@ -1,16 +1,16 @@
 import axios from 'axios';
 
 import { API_BASE_URL } from '@/shared/constants/main.constants';
-import { handleApiError } from '@/shared/helpers/helpers';
+import { handle_error } from '@/shared/helpers/handle_error';
 
-export const httpClient = axios.create({
+export const http_client = axios.create({
   baseURL: `${API_BASE_URL}/api`,
   timeout: 10000,
 });
 
-httpClient.interceptors.response.use(
+http_client.interceptors.response.use(
   (response) => response,
   (error) => {
-    return handleApiError(error);
+    return handle_error(error);
   },
 );
