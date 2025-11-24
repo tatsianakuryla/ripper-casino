@@ -5,7 +5,4 @@ export const GAMES_TYPE = {
   BETTING: 'betting',
 } as const;
 
-type Games = typeof GAMES_TYPE;
-export type Game = Games[keyof Games];
-
 export type AppRoute = (typeof APP_ROUTES)[keyof typeof APP_ROUTES];

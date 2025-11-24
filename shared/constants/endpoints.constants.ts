@@ -1,4 +1,4 @@
-import type { Game } from '@/shared/types/types';
+import type { Game } from '@/api/api.types';
 
 import { API_BASE_URL, SITE_ID } from '@/shared/constants/main.constants';
 
