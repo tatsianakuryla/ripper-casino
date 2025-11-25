@@ -15,6 +15,7 @@ import { shuffleArray } from '@/shared/helpers/shuffle';
 export const BonusDetailsSection = (): JSX.Element => {
   const { data } = useSiteData();
   const [offers, setOffers] = useState<typeof data.offers | []>([]);
+  const [tableRenderKey, setTableRenderKey] = useState(0);
 
   useEffect(() => {
     if (!data?.offers.length) return;
@@ -26,13 +27,14 @@ export const BonusDetailsSection = (): JSX.Element => {
     if (!data?.offers.length) return;
 
     setOffers(shuffleArray(data.offers).slice(0, BONUS_DETAILS_LIMIT));
+    setTableRenderKey((previousKey) => previousKey + 1);
   };
 
   return (
     <section className="bg-bg-ocean-blue pb-[137px]">
       <Container styles="flex flex-col gap-[48px]">
         <SectionHeading className="mb-[10px]">bonus details</SectionHeading>
-        <OffersTable offers={offers} />
+        <OffersTable key={tableRenderKey} offers={offers} />
         <FilterButton
           className="mt-[-23px] self-center w-[340px]"
           onClick={handleRefresh}

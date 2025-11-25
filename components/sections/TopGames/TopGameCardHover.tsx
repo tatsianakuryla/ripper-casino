@@ -11,7 +11,7 @@ export const TopGameCardHover = ({
   game,
 }: TopGameCardHoverProperties): JSX.Element => {
   return (
-    <div className="absolute inset-0 bg-bg-dark-blue/90 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-[16px] py-[28px] px-[50px]">
+    <div className="absolute inset-0 bg-bg-dark-blue/90 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-[16px] py-[28px] px-[20px]">
       <h3 className="text-text-accent font-sans font-medium text-[32px] leading-[100%] tracking-[0] text-center align-middle">
         {game.name}
       </h3>
