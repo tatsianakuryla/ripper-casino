@@ -7,13 +7,17 @@ import { Container } from '@/components/ui/Container';
 import { FilterButton } from '@/components/ui/FilterButton';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { useSiteData } from '@/hooks/api';
+import { TOP_CASINOS_LIMIT } from '@/shared/constants/main.constants';
 
 export const TopCasinosSection = (): JSX.Element => {
   const { data, isLoading } = useSiteData();
   const countryName = data?.website.country_name ?? '';
   const offers = data?.offers ?? [];
   const [isExpanded, setIsExpanded] = useState(false);
-  const offersToShow = offers.slice(0, isExpanded ? offers.length : 8);
+  const offersToShow = offers.slice(
+    0,
+    isExpanded ? offers.length : TOP_CASINOS_LIMIT,
+  );
   const handleClick = (): void => {
     setIsExpanded(!isExpanded);
   };
