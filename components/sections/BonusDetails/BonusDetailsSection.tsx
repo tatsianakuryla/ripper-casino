@@ -9,19 +9,23 @@ import { Container } from '@/components/ui/Container';
 import { FilterButton } from '@/components/ui/FilterButton';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { useSiteData } from '@/hooks/api';
+import { BONUS_DETAILS_LIMIT } from '@/shared/constants/main.constants';
 import { shuffleArray } from '@/shared/helpers/shuffle';
 
 export const BonusDetailsSection = (): JSX.Element => {
   const { data } = useSiteData();
-  const offerToShow = shuffleArray(data?.offers ?? []).slice(0, 6);
-  const [offers, setOffers] = useState(offerToShow);
+  const [offers, setOffers] = useState<typeof data.offers | []>([]);
 
   useEffect(() => {
-    setOffers(shuffleArray(data?.offers ?? []).slice(0, 6));
-  }, [data]);
+    if (!data?.offers.length) return;
+
+    setOffers(shuffleArray(data.offers).slice(0, BONUS_DETAILS_LIMIT));
+  }, [data?.offers]);
 
   const handleRefresh = (): void => {
-    setOffers(shuffleArray(data?.offers ?? []).slice(0, 6));
+    if (!data?.offers.length) return;
+
+    setOffers(shuffleArray(data.offers).slice(0, BONUS_DETAILS_LIMIT));
   };
 
   return (
