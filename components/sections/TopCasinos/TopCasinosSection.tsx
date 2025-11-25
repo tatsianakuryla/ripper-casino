@@ -18,7 +18,7 @@ export const TopCasinosSection = (): JSX.Element => {
     setIsExpanded(!isExpanded);
   };
   return (
-    <section className="bg-[var(--color-bg-ocean-blue)] mt-[-1px] pb-[140px]">
+    <section className="bg-[var(--color-bg-ocean-blue)] mt-[-1px] pb-[144px]">
       <Container styles="gap-[52px] flex-col">
         <SectionHeading>{`Top Casinos ${countryName}`}</SectionHeading>
         <OfferList offers={offersToShow} isLoading={isLoading} />

@@ -22,7 +22,7 @@ export const OfferButton = ({
     welcome:
       'bg-button-primary text-[28px] tracking-[0] text-bg-black py-[20px] px-[66px] rounded-[4px] hover:scale-105 transition-transform uppercase max-w-[340px] font-display',
     casino:
-      'bg-[var(--color-button-secondary)] text-white text-[20px] font-normal leading-[100%] tracking-[0%] py-[16px] px-[32px] rounded-[6px] hover:scale-105 transition-transform uppercase max-w-[205px] font-display',
+      'bg-[var(--color-button-secondary)] text-white text-[20px] font-normal leading-[100%] tracking-[0%] py-[16px] px-[32px] rounded-[6px] hover:scale-105 transition-transform uppercase max-w-[218px] font-display',
   };
 
   return (

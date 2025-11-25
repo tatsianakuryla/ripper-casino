@@ -18,7 +18,7 @@ export const FilterButton = ({
       onClick={onClick}
       className={`
         max-w-[345px]
-        py-[24px] px-[90px] 
+        py-[27px] px-[90px] 
         rounded-[6px] 
         font-display font-normal text-[28px] leading-[100%] tracking-[0%] 
         uppercase text-center bg-button-primary text-bg-black
