@@ -8,7 +8,7 @@ export const DallasCasinoDescription = (): JSX.Element => {
         into exciting games and vibrant entertainment. Join us for an
         unforgettable experience!
       </p>
-      <ul>
+      <ul className="list-disc list-outside pl-[38px]">
         <li>C$20 in free play credits</li>
         <li>20% discount of birthday day</li>
         <li>loyalty program available</li>

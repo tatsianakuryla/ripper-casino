@@ -1,6 +1,8 @@
 import type { JSX } from 'react';
 
 import { BonusDetailsSection } from '@/components/sections/BonusDetails/BonusDetailsSection';
+import { CowboysCasinoAdvantagesSection } from '@/components/sections/CowboysCasino/CowboysCasinoAdvantagesSection';
+import { CowboysCasinoLoginSection } from '@/components/sections/CowboysCasinoLogin/CowboysCasinoLoginSection';
 import { DallasCasinoSection } from '@/components/sections/DallasCasino/DallasCasinoSection';
 import { HeroSection } from '@/components/sections/Hero/HeroSection';
 import { TopCasinosSection } from '@/components/sections/TopCasinos/TopCasinosSection';
@@ -16,6 +18,8 @@ export default function HomePage(): JSX.Element {
       <BonusDetailsSection />
       <DallasCasinoSection />
       <TopGamesSection />
+      <CowboysCasinoAdvantagesSection />
+      <CowboysCasinoLoginSection />
     </main>
   );
 }
