@@ -5,7 +5,7 @@ import { APP_ROUTES } from '@/shared/constants/app_routes.constants';
 
 interface OfferButtonProps {
   offerId?: number;
-  isLoading: boolean;
+  isLoading?: boolean;
   variant?: 'primary' | 'welcome' | 'casino';
   className?: string;
   children?: string;
@@ -13,7 +13,7 @@ interface OfferButtonProps {
 
 export const LinkButton = ({
   offerId,
-  isLoading,
+  isLoading = false,
   variant = 'primary',
   className,
   children = 'Play Now',

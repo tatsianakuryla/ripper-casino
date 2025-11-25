@@ -1,6 +1,7 @@
 import type { JSX } from 'react';
 
-import { CowboyCasinoProsOrCons } from '@/components/sections/CowboysCasino/CowboyCasinoProsOrCons';
+import { CowboyCasinoProsOrCons } from '@/components/sections/CowboysCasinoAdvantages/CowboyCasinoProsOrCons';
+import { BodyText } from '@/components/ui/BodyText';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
@@ -21,10 +22,10 @@ export const DISADVANTAGES = [
 
 export const CowboysCasinoAdvantagesSection = (): JSX.Element => {
   return (
-    <section className="bg-bg-black pt-[74px] pb-[62px]">
+    <section className="bg-bg-black pt-[74px] pb-[64px]">
       <Container styles="flex flex-col gap-[54px]">
         <SectionHeading>Cowboys Casino Advantages</SectionHeading>
-        <p className="font-sans font-medium text-[20px] leading-[40px] tracking-[0] text-white">
+        <BodyText>
           Cowboys Casino, strategically situated in the heart of Calgary, is a
           premier gaming and entertainment destination that offers a plethora of
           benefits to its visitors. Known for its vibrant atmosphere and
@@ -32,7 +33,7 @@ export const CowboysCasinoAdvantagesSection = (): JSX.Element => {
           and tourists alike. Whether you're there for the games or the live
           entertainment, Cowboys Casino promises a memorable experience with its
           well-rounded offerings.
-        </p>
+        </BodyText>
         <div className="flex gap-[36px]">
           <CowboyCasinoProsOrCons list={ADVANTAGES} title="ADVANTAGES" />
           <CowboyCasinoProsOrCons list={DISADVANTAGES} title="DISADVANTAGES" />

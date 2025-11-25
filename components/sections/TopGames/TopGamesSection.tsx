@@ -24,9 +24,9 @@ export const TopGamesSection = (): JSX.Element => {
   }, [data]);
 
   return (
-    <section className="bg-bg-ocean-blue pt-[150px] pb-[140px]">
+    <section className="bg-bg-ocean-blue pt-[150px] pb-[137px]">
       <Container styles="flex flex-col gap-[48px]">
-        <SectionHeading>Top games</SectionHeading>
+        <SectionHeading className="mb-[6px]">Top games</SectionHeading>
         <TopGameList games={games} isLoading={isLoading} offerId={offerId} />
         <div className="flex justify-center">
           <LinkButton className="w-[340px]" offerId={offerId} variant="welcome">

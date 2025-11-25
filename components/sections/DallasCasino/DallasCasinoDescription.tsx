@@ -1,18 +1,21 @@
 import type { JSX } from 'react';
 
+import { BulletList } from '@/components/ui/BulletList';
+import { DescriptionBlock } from '@/components/ui/DescriptionBlock';
+
 export const DallasCasinoDescription = (): JSX.Element => {
   return (
-    <div className="flex flex-col gap-[21px] max-w-[528px] font-sans font-medium text-[20px] leading-[40px] tracking-[0] align-middle">
+    <DescriptionBlock gap="21px" maxWidth="528px">
       <p>
         Discover the thrill of gaming at Cowboys Casino in Calgary, Canada. Dive
         into exciting games and vibrant entertainment. Join us for an
         unforgettable experience!
       </p>
-      <ul className="list-disc list-outside pl-[38px]">
+      <BulletList>
         <li>C$20 in free play credits</li>
         <li>20% discount of birthday day</li>
         <li>loyalty program available</li>
-      </ul>
+      </BulletList>
       <p>
         Cowboys Casino, located in the heart of Calgary, Alberta, is a vibrant
         and bustling entertainment hub that offers a diverse range of gaming
@@ -23,6 +26,6 @@ export const DallasCasinoDescription = (): JSX.Element => {
         features dining venues and hosts various live events, making it a go-to
         destination for entertainment seekers in the region.
       </p>
-    </div>
+    </DescriptionBlock>
   );
 };
