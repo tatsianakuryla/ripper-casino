@@ -25,11 +25,14 @@ export const BonusDetailsSection = (): JSX.Element => {
   };
 
   return (
-    <section className="bg-bg-ocean-blue pb-[144px]">
+    <section className="bg-bg-ocean-blue pb-[137px]">
       <Container styles="flex flex-col gap-[48px]">
         <SectionHeading className="mb-[10px]">bonus details</SectionHeading>
         <OffersTable offers={offers} />
-        <FilterButton className="self-center" onClick={handleRefresh}>
+        <FilterButton
+          className="mt-[-23px] self-center w-[340px]"
+          onClick={handleRefresh}
+        >
           Refresh
         </FilterButton>
       </Container>
