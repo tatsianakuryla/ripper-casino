@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 
-interface BulletListProps {
+interface BulletListProperties {
   children: ReactNode;
   className?: string;
 }
@@ -8,7 +8,7 @@ interface BulletListProps {
 export const BulletList = ({
   children,
   className = '',
-}: BulletListProps): JSX.Element => {
+}: BulletListProperties): JSX.Element => {
   return (
     <ul
       className={`list-disc list-outside font-sans font-medium text-[20px] leading-[40px] tracking-[0] pl-[38px] text-white ${className}`}

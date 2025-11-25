@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
 import { BonusDetailsSection } from '@/components/sections/BonusDetails/BonusDetailsSection';
-import { CowboysCasinoAdvantagesSection } from '@/components/sections/CowboysCasino/CowboysCasinoAdvantagesSection';
+import { CowboysCasinoAdvantagesSection } from '@/components/sections/CowboysCasinoAdvantages/CowboysCasinoAdvantagesSection';
 import { CowboysCasinoLoginSection } from '@/components/sections/CowboysCasinoLogin/CowboysCasinoLoginSection';
 import { DallasCasinoSection } from '@/components/sections/DallasCasino/DallasCasinoSection';
 import { HeroSection } from '@/components/sections/Hero/HeroSection';

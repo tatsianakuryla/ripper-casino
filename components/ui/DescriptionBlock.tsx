@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 
-interface DescriptionBlockProps {
+interface DescriptionBlockProperties {
   children: ReactNode;
   className?: string;
   gap?: string;
@@ -12,7 +12,7 @@ export const DescriptionBlock = ({
   className = '',
   gap = '12px',
   maxWidth,
-}: DescriptionBlockProps): JSX.Element => {
+}: DescriptionBlockProperties): JSX.Element => {
   const maxWidthClass = maxWidth ? `max-w-[${maxWidth}]` : '';
   return (
     <div

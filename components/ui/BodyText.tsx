@@ -1,6 +1,6 @@
 import type { JSX, ReactNode } from 'react';
 
-interface BodyTextProps {
+interface BodyTextProperties {
   children: ReactNode;
   className?: string;
 }
@@ -8,7 +8,7 @@ interface BodyTextProps {
 export const BodyText = ({
   children,
   className = '',
-}: BodyTextProps): JSX.Element => {
+}: BodyTextProperties): JSX.Element => {
   return (
     <p
       className={`font-sans font-medium text-[20px] leading-[40px] tracking-[0] text-white ${className}`}
