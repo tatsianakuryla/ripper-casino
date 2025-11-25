@@ -4,6 +4,7 @@ import { BonusDetailsSection } from '@/components/sections/BonusDetails/BonusDet
 import { DallasCasinoSection } from '@/components/sections/DallasCasino/DallasCasinoSection';
 import { HeroSection } from '@/components/sections/Hero/HeroSection';
 import { TopCasinosSection } from '@/components/sections/TopCasinos/TopCasinosSection';
+import { TopGamesSection } from '@/components/sections/TopGames/TopGamesSection';
 import { WelcomeSection } from '@/components/sections/Welcome/WelcomeSection';
 
 export default function HomePage(): JSX.Element {
@@ -14,6 +15,7 @@ export default function HomePage(): JSX.Element {
       <TopCasinosSection />
       <BonusDetailsSection />
       <DallasCasinoSection />
+      <TopGamesSection />
     </main>
   );
 }

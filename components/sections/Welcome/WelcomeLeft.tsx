@@ -1,6 +1,6 @@
 import { type JSX } from 'react';
 
-import { OfferButton } from '@/components/ui/OfferButton';
+import { LinkButton } from '@/components/ui/LinkButton';
 
 interface HeroLeftProperties {
   offerId?: number;
@@ -18,9 +18,9 @@ export const WelcomeLeft = ({
       <h2 className="flex items-center min-h-[90px] font-normal text-[32px] leading-[130%] tracking-[0%] uppercase text-white">
         {isLoading ? 'Loading...' : `Exclusive welcome offer ${welcomeText}`}
       </h2>
-      <OfferButton offerId={offerId} isLoading={isLoading} variant="welcome">
+      <LinkButton offerId={offerId} isLoading={isLoading} variant="welcome">
         claim bonus
-      </OfferButton>
+      </LinkButton>
     </div>
   );
 };

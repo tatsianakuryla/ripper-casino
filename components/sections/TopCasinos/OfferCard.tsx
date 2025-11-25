@@ -4,7 +4,7 @@ import type { Casino } from '@/api/schemas';
 import type { JSX } from 'react';
 
 import { CASINO_LOGOS_ENDPOINT } from '@/api/endpoints';
-import { OfferButton } from '@/components/ui/OfferButton';
+import { LinkButton } from '@/components/ui/LinkButton';
 
 interface OfferCardProperties {
   offer: Casino;
@@ -33,9 +33,9 @@ export const OfferCard = ({
       <p className="mb-auto font-medium text-[20px] leading-[100%] text-center">
         {offer.bonuses.welcome_bonus}
       </p>
-      <OfferButton offerId={offer.id} variant="casino" isLoading={isLoading}>
+      <LinkButton offerId={offer.id} variant="casino" isLoading={isLoading}>
         Claim bonus
-      </OfferButton>
+      </LinkButton>
     </article>
   );
 };

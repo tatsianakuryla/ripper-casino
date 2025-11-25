@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export const DallasCasinoSection = (): JSX.Element => {
   return (
-    <section className="bg-bg-black pt-[74px] pb-[64px]">
+    <section className="bg-bg-black pt-[74px] pb-[58px]">
       <Container styles="flex flex-col gap-[58px]">
         <SectionHeading>Dallas Cowboys Casino</SectionHeading>
         <div className="flex gap-[47px]">

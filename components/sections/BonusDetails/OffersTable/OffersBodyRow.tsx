@@ -8,7 +8,7 @@ import { CASINO_LOGOS_ENDPOINT } from '@/api/endpoints';
 import { MoreInfoButton } from '@/components/sections/BonusDetails/MoreInfoButton';
 import { EmptyRow } from '@/components/sections/BonusDetails/OffersTable/EmptyRow';
 import { MoreInfoTable } from '@/components/sections/BonusDetails/OffersTable/MoreInfoTable';
-import { OfferButton } from '@/components/ui/OfferButton';
+import { LinkButton } from '@/components/ui/LinkButton';
 import { TableBorder } from '@/components/ui/TableBorder';
 
 interface OffersBodyRowProperties {
@@ -58,9 +58,9 @@ export const OffersBodyRow = ({
         </td>
         <td className="pr-[16px] pl-[20px] py-[16px] rounded-r-[8px]">
           <div className="flex items-center justify-center">
-            <OfferButton offerId={offer.id} isLoading={false} variant="casino">
+            <LinkButton offerId={offer.id} isLoading={false} variant="casino">
               GET THE BONUS
-            </OfferButton>
+            </LinkButton>
           </div>
         </td>
       </tr>

@@ -1,7 +1,7 @@
 import type { JSX } from 'react';
 
 import { AppLink } from '@/components/ui/Link';
-import { OfferButton } from '@/components/ui/OfferButton';
+import { LinkButton } from '@/components/ui/LinkButton';
 import { APP_ROUTES } from '@/shared/constants/app_routes.constants';
 
 interface HeaderNavigationProperties {
@@ -30,7 +30,7 @@ export const HeaderNavigation = ({
           </li>
         ))}
         <li className={`flex items-center justify-center`} key="offer-button">
-          <OfferButton offerId={offerId} isLoading={isLoading} />
+          <LinkButton offerId={offerId} isLoading={isLoading} />
         </li>
       </ul>
     </nav>
