@@ -7,7 +7,7 @@ import { SubsectionHeading } from '@/components/ui/SubsectionHeading';
 
 export const CowboysCasinoLoginSection = (): JSX.Element => {
   return (
-    <section className="bg-bg-ocean-blue pt-[144px] pb-[64px]">
+    <section className="bg-bg-ocean-blue pt-[144px] pb-[140px]">
       <Container styles="flex flex-col gap-[34px]">
         <SubsectionHeading>About Cowboys Casino Login</SubsectionHeading>
         <CowboysCasinoLoginDescription />

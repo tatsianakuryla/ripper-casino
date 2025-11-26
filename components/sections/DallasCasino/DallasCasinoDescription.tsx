@@ -5,7 +5,7 @@ import { DescriptionBlock } from '@/components/ui/DescriptionBlock';
 
 export const DallasCasinoDescription = (): JSX.Element => {
   return (
-    <DescriptionBlock gap="21px" maxWidth="528px">
+    <DescriptionBlock className="gap-[21px] max-w-[528px]">
       <p>
         Discover the thrill of gaming at Cowboys Casino in Calgary, Canada. Dive
         into exciting games and vibrant entertainment. Join us for an

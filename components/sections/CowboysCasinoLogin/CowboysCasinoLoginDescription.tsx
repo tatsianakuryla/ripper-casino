@@ -4,7 +4,7 @@ import { DescriptionBlock } from '@/components/ui/DescriptionBlock';
 
 export const CowboysCasinoLoginDescription = (): JSX.Element => {
   return (
-    <DescriptionBlock className="mb-[20px]">
+    <DescriptionBlock className="gap-[12px] mb-[20px]">
       <p>
         Cowboys Casino is a prominent entertainment venue in Calgary, known for
         its dynamic gaming environment and variety of entertainment options. It
