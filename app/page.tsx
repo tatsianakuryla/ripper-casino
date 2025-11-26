@@ -8,6 +8,7 @@ import { HeroSection } from '@/components/sections/Hero/HeroSection';
 import { TopCasinosSection } from '@/components/sections/TopCasinos/TopCasinosSection';
 import { TopGamesSection } from '@/components/sections/TopGames/TopGamesSection';
 import { WelcomeSection } from '@/components/sections/Welcome/WelcomeSection';
+import { Zen8Section } from '@/components/sections/Zen8/Zen8Section';
 
 export default function HomePage(): JSX.Element {
   return (
@@ -20,6 +21,7 @@ export default function HomePage(): JSX.Element {
       <TopGamesSection />
       <CowboysCasinoAdvantagesSection />
       <CowboysCasinoLoginSection />
+      <Zen8Section />
     </main>
   );
 }

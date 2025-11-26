@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 import type { JSX } from 'react';
 
+import { type Casino } from '@/api/schemas';
 import { OffersTable } from '@/components/sections/BonusDetails/OffersTable/OffersTable';
 import { Container } from '@/components/ui/Container';
 import { FilterButton } from '@/components/ui/FilterButton';
@@ -14,7 +15,7 @@ import { shuffleArray } from '@/shared/helpers/shuffle';
 
 export const BonusDetailsSection = (): JSX.Element => {
   const { data } = useSiteData();
-  const [offers, setOffers] = useState<typeof data.offers | []>([]);
+  const [offers, setOffers] = useState<Casino[]>([]);
   const [tableRenderKey, setTableRenderKey] = useState(0);
 
   useEffect(() => {

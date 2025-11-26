@@ -3,7 +3,7 @@ import type { JSX } from 'react';
 import { AppLink } from '@/components/ui/Link';
 import { APP_ROUTES } from '@/shared/constants/app_routes.constants';
 
-interface OfferButtonProps {
+interface OfferButtonProperties {
   offerId?: number;
   isLoading?: boolean;
   variant?: 'primary' | 'welcome' | 'casino';
@@ -17,7 +17,7 @@ export const LinkButton = ({
   variant = 'primary',
   className,
   children = 'Play Now',
-}: OfferButtonProps): JSX.Element => {
+}: OfferButtonProperties): JSX.Element => {
   const variants = {
     primary:
       'text-center align-middle bg-button-primary text-sm text-bg-black py-[12px] px-[66px] rounded-[4px] hover:scale-105 transition-transform max-w-[210px] font-display',
