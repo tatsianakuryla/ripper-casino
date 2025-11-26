@@ -2,6 +2,7 @@ import type { JSX } from 'react';
 
 import { BonusDetailsSection } from '@/components/sections/BonusDetails/BonusDetailsSection';
 import { CowboysCasinoAdvantagesSection } from '@/components/sections/CowboysCasinoAdvantages/CowboysCasinoAdvantagesSection';
+import { CowboysCasinoBonusesPromotionsSection } from '@/components/sections/CowboysCasinoBonusesPromotions/CowboysCasinoBonusesPromotionsSection';
 import { CowboysCasinoGamesSection } from '@/components/sections/CowboysCasinoGames/CowboysCasinoGamesSection';
 import { CowboysCasinoLoginSection } from '@/components/sections/CowboysCasinoLogin/CowboysCasinoLoginSection';
 import { CowboysCasinoSupportSection } from '@/components/sections/CowboysCasinoSupport/CowboysCasinoSupportSection';
@@ -28,6 +29,7 @@ export default function HomePage(): JSX.Element {
       <FAQSection />
       <CowboysCasinoGamesSection />
       <CowboysCasinoSupportSection />
+      <CowboysCasinoBonusesPromotionsSection />
     </main>
   );
 }
