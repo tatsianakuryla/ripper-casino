@@ -7,7 +7,7 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 
 export const CowboysCasinoGamesSection = (): JSX.Element => {
   return (
-    <section className="bg-bg-black pt-[74px] pb-[140px]">
+    <section className="bg-bg-black pt-[74px] pb-[64px]">
       <Container styles="flex flex-col gap-[52px]">
         <SectionHeading className="mb-[30px]">
           Games Available to Play at Cowboys Casino
