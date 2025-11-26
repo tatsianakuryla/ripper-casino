@@ -7,6 +7,7 @@ import type { JSX } from 'react';
 import { type Casino } from '@/api/schemas';
 import { OffersTable } from '@/components/sections/BonusDetails/OffersTable/OffersTable';
 import { Container } from '@/components/ui/Container';
+import { EmptyState } from '@/components/ui/EmptyState';
 import { FilterButton } from '@/components/ui/FilterButton';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { useSiteData } from '@/hooks/api';
@@ -31,17 +32,25 @@ export const BonusDetailsSection = (): JSX.Element => {
     setTableRenderKey((previousKey) => previousKey + 1);
   };
 
+  const isEmpty = offers.length === 0;
+
   return (
     <section className="bg-bg-ocean-blue pb-[137px]">
       <Container styles="flex flex-col gap-[48px]">
         <SectionHeading className="mb-[10px]">bonus details</SectionHeading>
-        <OffersTable key={tableRenderKey} offers={offers} />
-        <FilterButton
-          className="mt-[-23px] self-center w-[340px]"
-          onClick={handleRefresh}
-        >
-          Refresh
-        </FilterButton>
+        {isEmpty ? (
+          <EmptyState message="No bonus offers available" />
+        ) : (
+          <>
+            <OffersTable key={tableRenderKey} offers={offers} />
+            <FilterButton
+              className="mt-[-23px] self-center w-[340px]"
+              onClick={handleRefresh}
+            >
+              Refresh
+            </FilterButton>
+          </>
+        )}
       </Container>
     </section>
   );

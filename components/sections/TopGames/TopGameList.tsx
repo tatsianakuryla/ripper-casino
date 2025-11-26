@@ -3,6 +3,7 @@ import { type JSX } from 'react';
 import type { Game } from '@/api/schemas';
 
 import { TopGameCard } from '@/components/sections/TopGames/TopGameCard';
+import { EmptyState } from '@/components/ui/EmptyState';
 import { Loader } from '@/components/ui/Loader/Loader';
 
 interface TopGameListProperties {
@@ -16,10 +17,12 @@ export const TopGameList = ({
   isLoading,
   offerId,
 }: TopGameListProperties): JSX.Element => {
+  const isEmpty = !isLoading && games.length === 0;
+
   return (
     <ul
       className={`w-full font-sans min-h-[400px] ${
-        isLoading
+        isLoading || isEmpty
           ? 'flex items-center justify-center'
           : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-[21px] gap-x-[24px]'
       }`}
@@ -27,6 +30,10 @@ export const TopGameList = ({
       {isLoading ? (
         <li key="isLoading" className="flex">
           <Loader size={64}></Loader>
+        </li>
+      ) : isEmpty ? (
+        <li key="empty" className="flex w-full">
+          <EmptyState message="No games available" />
         </li>
       ) : (
         games.map((game) => (
