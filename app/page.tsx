@@ -7,6 +7,7 @@ import { CowboysCasinoGamesSection } from '@/components/sections/CowboysCasinoGa
 import { CowboysCasinoLoginSection } from '@/components/sections/CowboysCasinoLogin/CowboysCasinoLoginSection';
 import { CowboysCasinoSupportSection } from '@/components/sections/CowboysCasinoSupport/CowboysCasinoSupportSection';
 import { DallasCasinoSection } from '@/components/sections/DallasCasino/DallasCasinoSection';
+import { EmptySection } from '@/components/sections/Empty/EmptySection';
 import { FAQSection } from '@/components/sections/FAQ/FAQSection';
 import { HeroSection } from '@/components/sections/Hero/HeroSection';
 import { TopCasinosSection } from '@/components/sections/TopCasinos/TopCasinosSection';
@@ -30,6 +31,7 @@ export default function HomePage(): JSX.Element {
       <CowboysCasinoGamesSection />
       <CowboysCasinoSupportSection />
       <CowboysCasinoBonusesPromotionsSection />
+      <EmptySection />
     </main>
   );
 }
