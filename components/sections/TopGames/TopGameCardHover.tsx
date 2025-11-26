@@ -10,7 +10,7 @@ interface TopGameCardHoverProperties {
 export const TopGameCardHover = ({
   game,
 }: TopGameCardHoverProperties): JSX.Element => {
-  const gameName = game.name ?? '';
+  const gameName = game.name;
   const isLongName = gameName.length > 16;
   const isVeryLongName = gameName.length > 24;
   const titleSizeClass = isVeryLongName
