@@ -59,11 +59,11 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en" className={`${roboto.variable} ${paytoneOne.variable}`}>
-      <body className="font-sans bg-bg-black text-text-main my-0 mx-auto">
+      <body className="font-sans bg-bg-black text-text-main my-0 mx-auto min-h-screen flex flex-col">
         <QueryProvider>
           <ToasterProvider />
           <Header />
-          {children}
+          <div className="flex-grow">{children}</div>
           <Footer />
         </QueryProvider>
       </body>
