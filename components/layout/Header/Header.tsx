@@ -1,6 +1,6 @@
 'use client';
 
-import { HeaderLogo } from './HeaderLogo';
+import { Logo } from '../../ui/Logo';
 
 import type { JSX } from 'react';
 
@@ -14,7 +14,7 @@ export const Header = (): JSX.Element => {
   return (
     <header className="bg-[var(--color-bg-black)]">
       <Container styles="items-center gap-[12px] py-[21.5px]">
-        <HeaderLogo />
+        <Logo className="mr-auto" />
         <HeaderNavigation offerId={offerId} isLoading={isLoading} />
       </Container>
     </header>

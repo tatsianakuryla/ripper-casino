@@ -7,6 +7,7 @@ import type { ReactNode, JSX } from 'react';
 import { Header } from '@/components/layout/Header/Header';
 import { QueryProvider } from '@/providers/QueryProvider';
 import { ToasterProvider } from '@/providers/ToasterProvider';
+import { Footer } from '@/components/layout/Footer/Footer';
 
 export const metadata: Metadata = {
   title: 'Ripper Casino',
@@ -38,6 +39,7 @@ export default function RootLayout({
           <ToasterProvider />
           <Header />
           {children}
+          <Footer />
         </QueryProvider>
       </body>
     </html>
