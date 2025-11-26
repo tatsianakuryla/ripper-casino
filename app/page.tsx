@@ -9,6 +9,7 @@ import { TopCasinosSection } from '@/components/sections/TopCasinos/TopCasinosSe
 import { TopGamesSection } from '@/components/sections/TopGames/TopGamesSection';
 import { WelcomeSection } from '@/components/sections/Welcome/WelcomeSection';
 import { Zen8Section } from '@/components/sections/Zen8/Zen8Section';
+import { FAQSection } from '@/components/sections/FAQ/FAQSection';
 
 export default function HomePage(): JSX.Element {
   return (
@@ -22,6 +23,7 @@ export default function HomePage(): JSX.Element {
       <CowboysCasinoAdvantagesSection />
       <CowboysCasinoLoginSection />
       <Zen8Section />
+      <FAQSection />
     </main>
   );
 }

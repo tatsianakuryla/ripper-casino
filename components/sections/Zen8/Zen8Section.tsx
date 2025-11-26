@@ -8,7 +8,7 @@ import { SubsectionHeading } from '@/components/ui/SubsectionHeading';
 
 export const Zen8Section = (): JSX.Element => {
   return (
-    <section className="bg-bg-black pt-[69px] pb-[64px]">
+    <section className="bg-bg-black pt-[69px] pb-[66px]">
       <Container styles="flex flex-col gap-[48px]">
         <div className="flex gap-[80px] mb-[6px]">
           <DescriptionBlock className="gap-[12px]">
