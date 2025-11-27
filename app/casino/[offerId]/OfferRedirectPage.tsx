@@ -19,7 +19,9 @@ export function OfferRedirectPage({
   const { data } = useSiteData();
 
   useEffect(() => {
-    if (!data?.offers) return;
+    if (!data?.offers) {
+      return;
+    }
 
     const offer: Casino | undefined = data.offers.find(
       (offer) => offer.id === offerId,
