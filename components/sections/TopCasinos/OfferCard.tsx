@@ -20,7 +20,7 @@ export const OfferCard = ({
       <figure className="w-[190px] h-[76px] flex items-center justify-center">
         <Image
           src={CASINO_LOGOS_ENDPOINT(offer.logo)}
-          alt={offer.name}
+          alt={`${offer.bonuses.welcome_bonus} in ${offer.name}`}
           width={190}
           height={76}
           className="object-cover max-w-full max-h-full"

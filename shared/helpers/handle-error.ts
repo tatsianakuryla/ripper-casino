@@ -13,10 +13,6 @@ function createError(message: string, statusCode?: number): Error {
 
 export function handleError(error: unknown): Promise<never> {
   if (isValidationError(error)) {
-    console.error('[Validation] Validation failed:', {
-      message: error.message,
-      details: error.details,
-    });
     Toaster.error('Validation Error', error.details);
     return Promise.reject(createError(error.message, 422));
   }

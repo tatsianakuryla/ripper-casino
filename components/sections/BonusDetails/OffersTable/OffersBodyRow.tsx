@@ -32,7 +32,7 @@ export const OffersBodyRow = ({
           <figure className="w-full max-w-[170px] h-[53px] flex items-center justify-center mx-auto">
             <Image
               src={CASINO_LOGOS_ENDPOINT(offer.logo)}
-              alt={offer.name}
+              alt={`${offer.bonuses.welcome_bonus} in ${offer.name}`}
               width={170}
               height={53}
               className="object-contain max-w-full max-h-full"
