@@ -9,13 +9,14 @@ import { OffersTable } from '@/components/sections/BonusDetails/OffersTable/Offe
 import { Container } from '@/components/ui/Container';
 import { EmptyState } from '@/components/ui/EmptyState';
 import { FilterButton } from '@/components/ui/FilterButton';
+import { Loader } from '@/components/ui/Loader/Loader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { useSiteData } from '@/hooks/api';
 import { BONUS_DETAILS_LIMIT } from '@/shared/constants/main.constants';
 import { shuffleArray } from '@/shared/helpers/shuffle';
 
 export const BonusDetailsSection = (): JSX.Element => {
-  const { data } = useSiteData();
+  const { data, isLoading } = useSiteData();
   const [offers, setOffers] = useState<Casino[]>([]);
   const [tableRenderKey, setTableRenderKey] = useState(0);
 
@@ -32,13 +33,17 @@ export const BonusDetailsSection = (): JSX.Element => {
     setTableRenderKey((previousKey) => previousKey + 1);
   };
 
-  const isEmpty = offers.length === 0;
+  const isEmpty = !isLoading && offers.length === 0;
 
   return (
     <section className="bg-bg-ocean-blue pb-[137px]">
       <Container styles="flex flex-col gap-[48px]">
         <SectionHeading className="mb-[10px]">bonus details</SectionHeading>
-        {isEmpty ? (
+        {isLoading ? (
+          <div className="flex items-center justify-center min-h-[400px]">
+            <Loader size={64} />
+          </div>
+        ) : isEmpty ? (
           <EmptyState message="No bonus offers available" />
         ) : (
           <>
