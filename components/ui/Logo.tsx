@@ -22,7 +22,7 @@ export const Logo = ({ className = '' }: LogoProperties): JSX.Element => {
         src="/ripper-logo.svg"
         alt="Ripper Casino"
         width={97}
-        height={52.52}
+        height={53}
         priority
       />
     </AppLink>

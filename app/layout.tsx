@@ -10,13 +10,14 @@ import { QueryProvider } from '@/providers/QueryProvider';
 import { ToasterProvider } from '@/providers/ToasterProvider';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ripper-casino.vercel.app'),
   title: 'Ripper Casino - Best Online Casinos in Australia 2025',
   description:
     'Ripper Casino offers the best online casinos in Australia - generous bonuses, popular slots, live dealers and secure payment methods. Discover top offers today.',
   openGraph: {
     type: 'website',
     locale: 'en_AU',
-    url: 'https://rippercasino.com',
+    url: 'https://ripper-casino.vercel.app',
     siteName: 'Ripper Casino',
     title: 'Ripper Casino - Best Online Casinos in Australia 2025',
     description:
