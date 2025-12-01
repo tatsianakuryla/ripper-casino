@@ -53,8 +53,6 @@ export const GameSchema = z.object({
 
 export const GamesListSchema = z.array(GameSchema);
 
-export type SiteInfo = z.infer<typeof SiteInfoSchema>;
-export type CasinoBonuses = z.infer<typeof CasinoBonusesSchema>;
 export type Casino = z.infer<typeof CasinoSchema>;
 export type SiteData = z.infer<typeof SiteDataSchema>;
 export type Game = z.infer<typeof GameSchema>;

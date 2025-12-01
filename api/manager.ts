@@ -7,7 +7,7 @@ import {
   type SiteData,
   SiteDataSchema,
 } from '@/api/schemas';
-import { Validator } from '@/shared/helpers/validator';
+import { Validator } from '@/shared/validator/validator';
 
 class Manager {
   public async getSiteData(): Promise<SiteData> {
