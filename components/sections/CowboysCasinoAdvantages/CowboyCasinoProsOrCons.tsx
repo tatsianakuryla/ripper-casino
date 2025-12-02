@@ -17,8 +17,8 @@ export const CowboyCasinoProsOrCons = ({
         {title}
       </h4>
       <BulletList>
-        {list.map((advantage, index) => (
-          <li key={index}>{advantage}</li>
+        {list.map((advantage) => (
+          <li key={advantage}>{advantage}</li>
         ))}
       </BulletList>
     </div>
