@@ -3,7 +3,7 @@ import { useSiteData } from '@/hooks/api/index';
 interface UseFirstOfferReturn {
   offerId: number | undefined;
   isLoading: boolean;
-  welcomeText: string | undefined;
+  welcomeText: string | null | undefined;
 }
 
 export const useFirstOffer = (): UseFirstOfferReturn => {

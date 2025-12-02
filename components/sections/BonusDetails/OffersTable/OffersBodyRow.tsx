@@ -25,6 +25,12 @@ export const OffersBodyRow = ({
     setIsExpanded(!isExpanded);
   };
 
+  const formatFreeSpins = (freeSpins: string | null): string => {
+    if (freeSpins === null) return '–';
+    const digits = freeSpins.replace(/\D/g, '');
+    return digits ? `${digits} FS` : '–';
+  };
+
   return (
     <>
       <tr className="bg-bg-dark-blue font-sans text-[20px] leading-[100%] tracking-[0] text-center">
@@ -32,7 +38,7 @@ export const OffersBodyRow = ({
           <figure className="w-full max-w-[170px] h-[53px] flex items-center justify-center mx-auto">
             <Image
               src={CASINO_LOGOS_ENDPOINT(offer.logo)}
-              alt={`${offer.bonuses.welcome_bonus} in ${offer.name}`}
+              alt={`${offer.bonuses.welcome_bonus ?? 'Bonus'} in ${offer.name}`}
               width={170}
               height={53}
               className="object-contain max-w-full max-h-full"
@@ -41,15 +47,15 @@ export const OffersBodyRow = ({
           <TableBorder />
         </td>
         <td className={tdBasicStyle}>
-          {offer.bonuses.welcome_bonus}
+          {offer.bonuses.welcome_bonus ?? '–'}
           <TableBorder />
         </td>
         <td className={tdBasicStyle}>
-          {offer.bonuses.rate}
+          {offer.bonuses.rate ?? '–'}
           <TableBorder />
         </td>
         <td className={tdBasicStyle}>
-          {`${offer.bonuses.free_spins.replace(/\D/g, '')} FS`}
+          {formatFreeSpins(offer.bonuses.free_spins)}
           <TableBorder />
         </td>
         <td className="pr-[19px] pl-[20px] py-[16px] relative">

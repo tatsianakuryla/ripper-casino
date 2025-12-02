@@ -11,11 +11,11 @@ export const SiteInfoSchema = z.object({
 });
 
 export const CasinoBonusesSchema = z.object({
-  rate: z.string(),
-  amount: z.string(),
-  country: z.string(),
-  free_spins: z.string(),
-  welcome_bonus: z.string(),
+  rate: z.string().nullable(),
+  amount: z.string().nullable(),
+  country: z.string().nullable(),
+  free_spins: z.string().nullable(),
+  welcome_bonus: z.string().nullable(),
 });
 
 export const CasinoSchema = z.object({
@@ -34,8 +34,8 @@ export const CasinoSchema = z.object({
   created_at: z.string(),
   updated_at: z.string(),
   domain_url: z.string(),
-  position: z.number(),
-  country_code: z.string(),
+  position: z.number().nullable(),
+  country_code: z.string().nullable(),
   website_id: z.number().nullable(),
   link: z.string(),
 });

@@ -25,7 +25,7 @@ export const MoreInfoTable = ({
             Maximum amount:
             <TableBorder />
           </td>
-          <td className={tdBasicStyle}>{offer.bonuses.amount}</td>
+          <td className={tdBasicStyle}>{offer.bonuses.amount ?? '–'}</td>
         </tr>
 
         <tr className="border-b border-white/20">

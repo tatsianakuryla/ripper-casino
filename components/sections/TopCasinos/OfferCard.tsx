@@ -20,7 +20,7 @@ export const OfferCard = ({
       <figure className="w-[190px] h-[76px] flex items-center justify-center">
         <Image
           src={CASINO_LOGOS_ENDPOINT(offer.logo)}
-          alt={`${offer.bonuses.welcome_bonus} in ${offer.name}`}
+          alt={`${offer.bonuses.welcome_bonus ?? 'Bonus'} in ${offer.name}`}
           width={190}
           height={76}
           className="object-cover max-w-full max-h-full"
@@ -31,7 +31,7 @@ export const OfferCard = ({
         Welcome Bonus
       </p>
       <p className="mb-auto font-medium text-[20px] leading-[100%] text-center">
-        {offer.bonuses.welcome_bonus}
+        {offer.bonuses.welcome_bonus ?? '–'}
       </p>
       <LinkButton offerId={offer.id} variant="casino" isLoading={isLoading}>
         Claim bonus
