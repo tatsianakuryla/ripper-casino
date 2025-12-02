@@ -11,7 +11,7 @@ interface HeroLeftProperties {
 export const WelcomeLeft = ({
   offerId,
   isLoading,
-  welcomeText = 'Exclusive welcome offer!',
+  welcomeText = '',
 }: HeroLeftProperties): JSX.Element => {
   return (
     <div className="flex flex-col gap-[48px] max-w-[500px] py-[0px] ml-[7px]">

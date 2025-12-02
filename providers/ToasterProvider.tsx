@@ -13,9 +13,9 @@ export function ToasterProvider(): JSX.Element {
       closeButton
       toastOptions={{
         style: {
-          background: '#1a1a1a',
-          color: '#fff',
-          border: '1px solid #333',
+          background: '#fff',
+          color: '#1a1a1a',
+          border: '1px solid #e5e5e5',
         },
         className: 'sonner-toaster',
       }}
